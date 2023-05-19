@@ -16,7 +16,7 @@ public class SalesContract {
     }
 
     public void setSalesTaxAmount(double salesTaxAmount) {
-        this.salesTaxAmount = salesTaxAmount;
+        this.salesTaxAmount = .05;
     }
 
     public double getRecordingFee() {
@@ -24,16 +24,24 @@ public class SalesContract {
     }
 
     public void setRecordingFee(double recordingFee) {
-        this.recordingFee = recordingFee;
+        this.recordingFee = 100;
     }
 
     public double getProcessingFee() {
-        return processingFee;
+        if (Vehicle < 10000) {
+            processingFee = 295;
+        } else {
+            processingFee = 495;
+        }
+
+        return 0;
     }
 
     public void setProcessingFee(double processingFee) {
-        this.processingFee = processingFee;
+        this.processingFee = 295;
     }
+
+
 
     @Override
     public double getTotalPrice() {
@@ -61,4 +69,7 @@ public class SalesContract {
             return 0.0;
         }
     }
+
+    public salesContract(double)
+
 }
